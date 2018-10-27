@@ -155,11 +155,11 @@ public class main {
 	  System.out.println("1.Genesee Valley Park North Course");
 	  System.out.println("2.The Old Course at St.Andrews");
 	  System.out.print("Your choice [1 - 2]: ");
-	  int choose = scan.nextInt();
+	  
 	  String decision = "Y";
 	  
 	  while (decision.equals("Y")) {
-		  
+		  int choose = scan.nextInt();
 		  
 		  
 	if(choose == 1) {
@@ -310,6 +310,10 @@ public class main {
 					
 					     score = score + count;   
 					     
+					     if(progress == 17) {
+					    	 printFscore(score,temppar);
+					     }
+					     
 					     //Print out score after each hole 
 					     printScore(score, temppar);
 						   
@@ -336,6 +340,7 @@ public class main {
 			 
     
 		     //Ask the player if they want to keep playing
+             
              System.out.print("Do you want to play another round? [Y/N]: ");
 		     decision = scan.next();
 		    
@@ -370,7 +375,7 @@ public class main {
          
          //The method to print score.
          public static void printScore(int score, int temppar) {
-        	 if(score - temppar < 0) {
+        	  if(score - temppar < 0) {
 		    	  System.out.println("Your score after the hole is: " + (score - temppar) +" under");
 		             }else if (score - temppar == 0) {
 		    	        System.out.println("Your score after the hole is: par");
@@ -408,4 +413,15 @@ public class main {
              }
          }
          
+         public static void printFscore(int score, int temppar) {
+       		  if(score - temppar < 0) {
+   		    	  System.out.println("Your final score is: " + (score - temppar) +" under");
+   		             }else if (score - temppar == 0) {
+   		    	        System.out.println("Your final score is: par");
+   		             }else if (score - temppar > 0) {
+   		    	        System.out.println("Your final score is: " + (score - temppar) + " over");
+   		                }  
+       	  }
+         
+
 }
