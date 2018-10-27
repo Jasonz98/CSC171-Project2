@@ -1,8 +1,14 @@
-/*Name: Senqi Zhang
+/* Member
+ * Name: Senqi Zhang
  * NetID: Szhang71
  * Assignment Number: Project1
  * Lab Section: T/R 11:05-12:20
- 
+ * 
+ * Member
+ * Name: Mingqing Sun
+ * NetID: msun13
+ * Assignment Number: Project 2
+ * Lab Section: M/W 14:00-15:15
  */
 
 import java.util.ArrayList;
