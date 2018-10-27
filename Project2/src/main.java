@@ -343,7 +343,7 @@ public class main {
 			  System.out.println("Game Stopped");
 			  System.exit(0);
 		      }
- }
+  }
 	  
 }
    
@@ -362,6 +362,7 @@ public class main {
    
          static Random random = new Random();
          static Scanner scan = new Scanner(System.in);
+         
          //The method to calculate the distance hit
          public static int nextDistance(int mean, int stddev, int power) {
 		      double fmean = mean * power / 10.0;
@@ -370,6 +371,7 @@ public class main {
 		      return (int)val;
 		      }
          
+         //The method to print score.
          public static void printScore(int score, int temppar) {
         	 if(score - temppar < 0) {
 		    	  System.out.println("Your score after the hole is: " + (score - temppar) +" under");
@@ -380,7 +382,7 @@ public class main {
 		                }  
          }
          
-         
+         //The method to print distance
          public static void printDistance(double d, int progress2) {
         	 if(d >= 20) {
 			       System.out.println("[Shot " + (progress2 + 1)+ "]. " +  (int)d + " yards to the hole." );
@@ -389,6 +391,7 @@ public class main {
 		        }
          }
          
+         //If the power enter is invalid
          public static void invalidPower(int choose) {
         	 if(choose > 10 || choose < 1) {
 		        	System.out.println("\n" + "That's an invalid power!");
