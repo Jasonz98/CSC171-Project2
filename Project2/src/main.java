@@ -2,7 +2,7 @@
  * NetID: Szhang71
  * Assignment Number: Project1
  * Lab Section: T/R 11:05-12:20
- * ¡°I did not collaborate with anyone on this assignment.¡±
+ 
  */
 
 import java.util.ArrayList;
@@ -150,17 +150,18 @@ public class main {
 	  
 	 
 	  //Start of the game
-	  System.out.println("Welcome to the TTY Golf Game" + "\n"); 
-	  System.out.println("Please select a course:");
-	  System.out.println("1.Genesee Valley Park North Course");
-	  System.out.println("2.The Old Course at St.Andrews");
-	  System.out.print("Your choice [1 - 2]: ");
-	  
+	 
 	  String decision = "Y";
+	  System.out.println("Welcome to the TTY Golf Game" + "\n");
 	  
 	  while (decision.equals("Y")) {
-		  int choose = scan.nextInt();
 		  
+		   
+	      System.out.println("Please select a course:");
+	      System.out.println("1.Genesee Valley Park North Course");
+	      System.out.println("2.The Old Course at St.Andrews");
+	      System.out.print("Your choice [1 - 2]: ");
+	      int choose = scan.nextInt();
 		  
 	if(choose == 1) {
 		  System.out.println("\n" + "You have chosen the Genesee Valley Park North Course" + "\n");
@@ -226,13 +227,19 @@ public class main {
 				
 				       score = score + count;   
 				       
+				       if(progress == 17) {
+				    	     System.out.print("\n");
+					    	 printFscore(score,temppar);
+					    	 break;
+					     }
+				       
 				       //Print Score after each hole
 				       printScore(score, temppar);
 			   
 			            //Enter next to break the loop
 			            System.out.print("Type 'next' to continue to the next hole: ");
 	                      String fw = scan.next();
-	                      System.out.println("\n");
+	                      System.out.print("\n");
 	                      
 	                      if(fw.equals("next")) {
 	            	             break;
@@ -311,7 +318,9 @@ public class main {
 					     score = score + count;   
 					     
 					     if(progress == 17) {
+					    	 System.out.print("\n");
 					    	 printFscore(score,temppar);
+					    	 break;
 					     }
 					     
 					     //Print out score after each hole 
@@ -320,7 +329,7 @@ public class main {
 				   
 				         System.out.print("Type 'next' to continue to the next hole: ");
 		                 String fw = scan.next();
-		                 System.out.println("\n");
+		                 System.out.print("\n");
 		                 
 		                 if(fw.equals("next")) {
 		            	     break;
@@ -343,7 +352,7 @@ public class main {
              
              System.out.print("Do you want to play another round? [Y/N]: ");
 		     decision = scan.next();
-		    
+		     System.out.print("\n");
 		  
   }
 	  
