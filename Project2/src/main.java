@@ -155,12 +155,12 @@ public class main {
 	  System.out.println("1.Genesee Valley Park North Course");
 	  System.out.println("2.The Old Course at St.Andrews");
 	  System.out.print("Your choice [1 - 2]: ");
-	  int choose = Integer.parseInt(scan.nextLine());
+	  int choose = scan.nextInt();
 	  String decision = "Y";
 	  
 	  while (decision.equals("Y")) {
 		  
-		  try {
+		  
 		  
 	if(choose == 1) {
 		  System.out.println("\n" + "You have chosen the Genesee Valley Park North Course" + "\n");
@@ -185,9 +185,9 @@ public class main {
 			    count++;
 		        
 			      System.out.print("Choose your club [1 - 10]: ");
-		          int choose2 = Integer.parseInt(scan.nextLine());
+		          int choose2 = scan.nextInt();
 		          System.out.print("Power [1 - 10]: ");
-		          int choose3 = Integer.parseInt(scan.nextLine());
+		          int choose3 = scan.nextInt();
 		          invalidPower(choose3); 
 		            
 		            //Variables that store means and standard deviation
@@ -207,7 +207,7 @@ public class main {
 			        System.out.println("You are on the green");
 			   
 			        System.out.print("Putt Power [1 - 10]: ");
-			        int choose4 = Integer.parseInt(scan.nextLine());
+			        int choose4 = scan.nextInt();
 			        invalidPower(choose4);
 			        
 			        int temp7 = P.get(choose4-1).getMean();
@@ -278,9 +278,9 @@ public class main {
 				    count++;
 			        
 				    System.out.print("Choose your club [1 - 10]: ");
-			        int choose2 = Integer.parseInt(scan.nextLine());
+			        int choose2 = scan.nextInt();
 			        System.out.print("Power [1 - 10]: ");
-			        int choose3 = Integer.parseInt(scan.nextLine());
+			        int choose3 = scan.nextInt();
 			  
 			        int temp4 = C.get(choose2-1).getMean();
 			        int temp5 = C.get(choose2-1).getStddev();
@@ -293,7 +293,7 @@ public class main {
 				        System.out.println("You are on the green");
 				   
 				        System.out.print("Putt Power [1 - 10]: ");
-				        int choose4 = Integer.parseInt(scan.nextLine());
+				        int choose4 = scan.nextInt();
 				        int temp7 = P.get(choose4-1).getMean();
 				        int temp8 = P.get(choose4-1).getStddev();
 				        double temp9 = nextDistance(temp7,temp8,choose4);
@@ -339,10 +339,7 @@ public class main {
              System.out.print("Do you want to play another round? [Y/N]: ");
 		     decision = scan.next();
 		    
-		  }catch(NumberFormatException a) {
-			  System.out.println("Game Stopped");
-			  System.exit(0);
-		      }
+		  
   }
 	  
 }
@@ -396,7 +393,7 @@ public class main {
         	 if(choose > 10 || choose < 1) {
 		        	System.out.println("\n" + "That's an invalid power!");
 		        	System.out.print("Putt Power [1 - 10]: ");
-		        	choose = Integer.parseInt(scan.nextLine());
+		        	choose = scan.nextInt();
 		        }
          }
          
